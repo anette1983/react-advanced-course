@@ -1,14 +1,14 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { Provider } from "react-redux";
-import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import "./index.scss";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Movies from "./features/Movies/Movies";
 import About from "./features/About/About";
+import { Provider } from "react-redux";
 import store from "./store";
 import "semantic-ui-css/semantic.min.css";
-import "./index.scss";
 
 const router = createBrowserRouter([
   {
@@ -32,12 +32,12 @@ const router = createBrowserRouter([
 ]);
 
 const root = ReactDOM.createRoot(
-  document.getElementById("root") as HTMLElement,
+  document.getElementById("root") as HTMLElement
 );
 root.render(
   <React.StrictMode>
     <RouterProvider router={router} />
-  </React.StrictMode>,
+  </React.StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function

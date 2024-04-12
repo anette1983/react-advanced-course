@@ -25,6 +25,8 @@
 // }
 
 // export default MovieCard;
+
+
 import React from "react";
 import {
   Card,

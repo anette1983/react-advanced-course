@@ -1,10 +1,10 @@
 // import styles from "./Movies.module.scss";
-import { connect } from "react-redux";
-import { CardGroup } from "semantic-ui-react";
 
-import { Movie } from "../../reducers/movies";
+import { connect } from "react-redux";
 import { RootState } from "../../store";
+import { Movie } from "../../reducers/movies";
 import MovieCard from "./MovieCard";
+import { CardGroup } from "semantic-ui-react";
 
 interface Props {
   movies: Movie[];
@@ -13,8 +13,22 @@ interface Props {
 function Movies({ movies }: Props) {
   return (
     <section>
-      {/* <div className={styles.list}> */}
-      <CardGroup centered stackable>
+      {/* <div className={styles.list}>
+                {movies.map(m => (
+                    <MovieCard
+                        key={m.id}
+                        id={m.id}
+                        title={m.title}
+                        overview={m.overview}
+                        popularity={m.popularity}
+                    />
+                ))}
+            </div> */}
+      <CardGroup
+        centered
+        stackable
+        // itemsPerRow={3}
+      >
         {movies.map((m) => (
           <MovieCard
             key={m.id}
@@ -25,7 +39,6 @@ function Movies({ movies }: Props) {
           />
         ))}
       </CardGroup>
-      {/* </div> */}
     </section>
   );
 }

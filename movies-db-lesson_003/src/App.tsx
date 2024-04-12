@@ -9,19 +9,13 @@ function App() {
         <h4>The Movies DB</h4>
         <ul>
           <li>
-            <Link className={styles.link} to="/">
-              Home
-            </Link>
+            <Link className={styles.link} to="/">Home</Link>
           </li>
           <li>
-            <Link className={styles.link} to="/movies">
-              Movies
-            </Link>
+            <Link className={styles.link} to="/movies">Movies</Link>
           </li>
           <li>
-            <Link className={styles.link} to="/about">
-              About
-            </Link>
+            <Link className={styles.link} to="/about">About</Link>
           </li>
         </ul>
       </header>

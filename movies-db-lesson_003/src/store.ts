@@ -1,10 +1,10 @@
-import { createStore } from "redux";
+import { createStore } from 'redux';
 
 import rootReducer from "./reducers";
 
 function configureStore() {
-  const store = createStore(rootReducer);
-  return store;
+    const store = createStore(rootReducer);
+    return store;
 }
 
 const store = configureStore();
